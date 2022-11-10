@@ -4,6 +4,7 @@ import android.app.Application
 import com.rxyzent.remainder.core.di.module.app.AppModule
 import com.rxyzent.remainder.core.di.module.dataBase.DaoModule
 import com.rxyzent.remainder.core.di.module.dataBase.DbBuilder
+import com.rxyzent.remainder.core.di.module.ui.activity.ActivitiesModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -15,6 +16,7 @@ import javax.inject.Singleton
 @Component(modules = [
     AndroidInjectionModule::class,
     AppModule::class,
+    ActivitiesModule::class,
     DaoModule::class,
     DbBuilder::class
 ])
