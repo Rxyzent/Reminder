@@ -7,7 +7,27 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.rxyzent.remainder.ui.home.HomeFragment"
+        android:name="com.rxyzent.remainder.ui.main.home.HomeFragment"
         android:label="home_fragment"
-        tools:layout="@layout/home_fragment" />
+        tools:layout="@layout/home_fragment" >
+    </fragment>
+    <fragment
+        android:id="@+id/todoFragment"
+        android:name="com.rxyzent.remainder.ui.main.toDo.TodoFragment"
+        android:label="TodoFragment" >
+    </fragment>
+    <fragment
+        android:id="@+id/birthdayFragment"
+        android:name="com.rxyzent.remainder.ui.main.birthday.BirthdayFragment"
+        android:label="BirthdayFragment" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.rxyzent.remainder.ui.main.payment.PaymentFragment"
+        android:label="PaymentFragment" />
+    <fragment
+        android:id="@+id/completedFragment"
+        android:name="com.rxyzent.remainder.ui.main.completed.CompletedFragment"
+        android:label="CompletedFragment" />
+
+
 </navigation>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_nav"
+    app:startDestination="@id/detailFragment2">
+
+    <fragment
+        android:id="@+id/detailFragment2"
+        android:name="com.rxyzent.remainder.ui.details.detail.DetailFragment"
+        android:label="detail_fragment"
+        tools:layout="@layout/detail_fragment" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.rxyzent.remainder.ui.details.info.InfoFragment"
+        android:label="EditFragment"
+        tools:layout="@layout/info_fragment">
+
+        <action
+            android:id="@+id/action_infoFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/themeFragment"
+        android:name="com.rxyzent.remainder.ui.details.theme.ThemeFragment"
+        android:label="ThemeFragment"
+        tools:layout="@layout/theme_fragment"/>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.rxyzent.remainder.ui.details.edit.EditFragment"
+        android:label="EditFragment"
+        tools:layout="@layout/detail_fragment"/>
+</navigation>

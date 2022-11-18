@@ -18,6 +18,7 @@ abstract class DbBuilder {
                 context,
                 MyDataBase::class.java, "user_db.db"
             ).allowMainThreadQueries()
+                .fallbackToDestructiveMigration()
                 .build()
 
         }

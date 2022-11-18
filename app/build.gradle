@@ -80,4 +80,8 @@ dependencies {
     def room_version = "2.4.3"
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
+    implementation("androidx.room:room-rxjava3:$room_version")
+
+    //EventBus
+    implementation("org.greenrobot:eventbus:3.3.1")
 }

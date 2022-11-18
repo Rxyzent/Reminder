@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.details.theme.ThemeFragment">
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/ic_baseline_arrow_back_25"
+        android:layout_margin="10dp"/>
+
+<TextView
+    android:id="@+id/autoMode"
+    android:layout_width="140dp"
+    android:layout_height="wrap_content"
+    android:text="auto mode"
+    android:textSize="18sp"
+    android:gravity="center"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="7dp"
+    android:textColor="@color/textColor"
+    android:background="@drawable/theme_btn_back"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintVertical_chainStyle="packed"
+    app:layout_constraintBottom_toTopOf="@id/lightMode"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/lightMode"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="light mode"
+        android:textSize="18sp"
+        android:layout_marginVertical="15dp"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="7dp"
+        android:textColor="@color/textColor"
+        android:background="@drawable/theme_btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/darkMode"
+        app:layout_constraintTop_toBottomOf="@id/autoMode"/>
+
+    <TextView
+        android:id="@+id/darkMode"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="dark mode"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:paddingVertical="7dp"
+        android:textColor="@color/textColor"
+        android:background="@drawable/theme_btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lightMode"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/autoMode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/textColor"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:text="Day/Night mode"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
