@@ -34,7 +34,7 @@ class MainActivity : DaggerAppCompatActivity() {
     private val binding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
-    protected var modeOrder = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+
     @Inject
     lateinit var db : MyDataBase
 
@@ -45,12 +45,7 @@ class MainActivity : DaggerAppCompatActivity() {
         checkPermissionOrStart()
         canExactAlarmsBeScheduled()
 
-        if(getNightMode()!=0) {
-            modeOrder =  getNightMode()
-        }
-
-
-        AppCompatDelegate.setDefaultNightMode(modeOrder)
+        AppCompatDelegate.setDefaultNightMode(getNightMode())
 
         val navController = Navigation.findNavController(this,R.id.main_nav_host_fragment)
 
@@ -142,7 +137,7 @@ class MainActivity : DaggerAppCompatActivity() {
                 }
 
                 override fun onError(e: Throwable) {
-                    TODO("Not yet implemented")
+                    nigthMode = AppCompatDelegate.MODE_NIGHT_UNSPECIFIED
                 }
 
             })

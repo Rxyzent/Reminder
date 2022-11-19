@@ -26,7 +26,7 @@ class WidgetViewsFactory(ctxt: Context?, intent: Intent) :
     private var ctxt: Context? = null
     private val appWidgetId: Int
     private lateinit var data:List<ListData>
-
+//  private val currentTime = System.currentTimeMillis()
 
 
     init {
@@ -62,6 +62,8 @@ class WidgetViewsFactory(ctxt: Context?, intent: Intent) :
     @SuppressLint("RemoteViewLayout")
     override fun getViewAt(position: Int): RemoteViews {
         var icon = R.drawable.ic_baseline_sticky_note_2_24
+//        val days = (data[position].date-currentTime)/(1000*60*60*24).toInt()
+//        val dayStr = "D+".plus(days)
         when(items[position].type){
             "todo"->icon = R.drawable.ic_baseline_sticky_note_2_24
             "payment"->icon = R.drawable.ic_baseline_monetization_on_24
@@ -71,6 +73,7 @@ class WidgetViewsFactory(ctxt: Context?, intent: Intent) :
             R.layout.widget_list_item)
         row.setTextViewText(R.id.widget_title, items[position].title)
         row.setTextViewText(R.id.widget_description, items[position].description)
+        //row.setTextViewText(R.id.widget_days,dayStr)
         row.setImageViewResource(R.id.widget_icon_back,icon)
         val i = Intent()
         val extras = Bundle()

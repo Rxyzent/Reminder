@@ -1,5 +1,6 @@
 package com.rxyzent.remainder.ui.details.theme
 
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.rxyzent.remainder.core.dataProvider.db.MyDataBase
@@ -60,7 +61,7 @@ class ThemeViewModel @Inject constructor() : ViewModel() {
                 }
 
                 override fun onError(e: Throwable) {
-                    TODO("Not yet implemented")
+                    listLiveData.postValue(NigthMode(AppCompatDelegate.MODE_NIGHT_UNSPECIFIED))
                 }
 
             })

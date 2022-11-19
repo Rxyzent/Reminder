@@ -28,7 +28,6 @@ class BirthdayViewModel @Inject constructor() : ViewModel() {
                 }
 
                 override fun onError(e: Throwable) {
-                    TODO("Not yet implemented")
                 }
 
             })
